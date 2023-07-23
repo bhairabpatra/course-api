@@ -7,4 +7,8 @@ public interface CourseService {
 
     public Course createCourse(Course course);
     public List<Course> getCourses();
+
+    public Course getCourse(Long cid);
+
+    public Course updateCourse(Course course);
 }
