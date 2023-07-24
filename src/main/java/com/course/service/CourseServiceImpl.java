@@ -1,13 +1,15 @@
 package com.course.service;
+
 import com.course.courseentity.Course;
 import com.course.dao.CourseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CourseServiceImpl implements CourseService{
+public class CourseServiceImpl implements CourseService {
 
     @Autowired
     private CourseRepo courseRepo;
@@ -24,7 +26,7 @@ public class CourseServiceImpl implements CourseService{
 
     @Override
     public Course getCourse(Long id) {
-        Optional<Course>  course = courseRepo.findById(id);
+        Optional<Course> course = courseRepo.findById(id);
         return course.get();
     }
 
